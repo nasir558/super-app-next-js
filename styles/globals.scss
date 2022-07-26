@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$GreenC: #71D08D;
+$WhiteC: #ffffff;
+$LightGreyC: #FAFAFA;
+$LightGrey1C: rgba(0, 0, 0, 0.1);
+$LightGrey2C: #CDCDCD;
+$BlackC: #222222;
+$DarkGrey1C: #636363;
+$DarkGrey2C: #656565;
+$DarkGrey3C: #A4A4A4;
+
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login-bg {
+  background-image: url('../public/login-bg.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center 160px;
+
+  @media (min-width: $sm) {
+    background-position: center 160px;
+  }
+
+  @media (min-width: $md) {
+    background-position: center 140px;
+  }
+
+  @media (min-width: $lg) {
+    background-position: center 120px;
+  }
+
+  @media (min-width: $xl) {
+    background-position: center 32px;
+  }
+
+  @media (min-width: $xxl) {
+    background-position: center -22px;
+  }  
+  
+}
+
+@layer components {
+  .login-form-container {
+    @apply bg-WhiteC block mx-auto rounded-lg shadow-loginForm w-full max-w-[95%] sm:max-w-[523px] px-[20px] md:px-[51px] lg:px-[109px] py-[51px] text-center;
+  }
+
+  .login-input-field {
+    @apply border border-LightGrey2C mt-[7px] text-[14px] leading-[19px] p-4 rounded-lg focus:border-GreenC w-full focus:outline-none;
+  }
+
+  .custom-button {
+    @apply w-full text-[18px] leading-[24px] bg-GreenC text-WhiteC hover:bg-BlackC text-center rounded-lg py-3 px-4 mt-10;
+  }
+}

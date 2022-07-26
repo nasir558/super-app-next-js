@@ -1,1 +1,1 @@
-# super-app-next-js
+*Super App* Dashboard Ui
